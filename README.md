@@ -80,7 +80,6 @@ This project offers a complete data analysis solution focused on extracting valu
      - Identifying countries with negative GDP growth.
      - Listing countries with a population higher than the world average and their corresponding GDP stats.
      - Highlighting countries contributing over 3% to the world GDP.
-     - Finding countries with GDP above $3 trillion.
      - Ranking countries based on population growth impact and GDP share.
    - **Documentation**: Maintain detailed notes for each query, outlining its goal, methodology, and the results obtained, ensuring clarity for future reference and collaboration.
 
