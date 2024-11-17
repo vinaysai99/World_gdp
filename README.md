@@ -1,9 +1,9 @@
-# SQL+Python : Walmart Data Analysis
+# SQL+Python : Global GDP Data Analysis
 
 ## Project Overview
 
 
-This project offers a complete data analysis solution focused on extracting valuable business insights from Walmart sales data. It leverages Python for data processing and analysis, SQL for complex querying, and structured problem-solving methods to address important business challenges. This project is ideal for data analysts aiming to enhance their skills in data manipulation, SQL querying, and data pipeline development.
+This project offers a complete data analysis solution focused on extracting valuable business insights from Global GDP data. It leverages Python for data processing and analysis, SQL for complex querying, and structured problem-solving methods to address important business challenges. This project is ideal for data analysts aiming to enhance their skills in data manipulation, SQL querying, and data pipeline development.
 
 ---
 ## Getting Started
@@ -45,8 +45,8 @@ This project offers a complete data analysis solution focused on extracting valu
       - Use the command `kaggle datasets download -d <dataset-path>` to pull datasets directly into your project.
 
 ### 3. Download Walmart Sales Data
-   - **Data Source**: Use the Kaggle API to download the Walmart sales datasets from Kaggle.
-   - **Dataset Link**: [Walmart Sales Dataset](https://www.kaggle.com/najir0123/walmart-10k-sales-datasets)
+   - **Data Source**: Use the Kaggle API to download the GDP global datasets from Kaggle.
+   - **Dataset Link**: [GDP Dataset](https://www.kaggle.com/datasets/muneebqureshi3131/gdp-by-country)
    - **Storage**: Save the data in the `data/` folder for easy reference and access.
 
 ### 4. Install Required Libraries and Load Data
@@ -64,11 +64,11 @@ This project offers a complete data analysis solution focused on extracting valu
    - **Remove Duplicates**: Identify and remove duplicate entries to avoid skewed results.
    - **Handle Missing Values**: Drop rows or columns with missing values as they are insignificant.
    - **Currency Formatting**: Use `.replace()` to handle and format currency values for analysis.
-   - **Validation**: Check for any remaining inconsistencies and verify the cleaned data.
+   - **Validation**: Check for any remaining inconsistencies and verify the cleaned data
 
 ### 7. Feature Engineering
-   - **Create New Columns**: Calculate the `Total Amount` for each transaction by multiplying `unit_price` by `quantity` and adding this as a new column.
-   - **Enhance Dataset**: Adding this calculated field will streamline further SQL analysis and aggregation tasks.
+   - **Create New Columns**: Clean and preprocess the dataset by removing unwanted characters such as `$` and `,` from the `GDP(nominal,2022)` and `population` columns, then convert these fields into numeric values. Rename columns to make them more intuitive (e.g., `GDP(nominal,2022)` to `gdp_nominal_2022`).
+   - **Enhance Dataset**: This transformation facilitates efficient analysis by enabling numerical operations on `GDP_growth_percentage` and `worldGDP_share_percentage`, which are also cleaned by removing `%` signs and converting them into float values. These improvements streamline further aggregation and analysis tasks in SQL or other analytical processes.
 
 ### 8. Load Data into MySQL
    - **Set Up Connections**: Connect to MySQL using `sqlalchemy` and load the cleaned data into database.
@@ -76,13 +76,13 @@ This project offers a complete data analysis solution focused on extracting valu
    - **Verification**: Run initial SQL queries to confirm that the data has been loaded accurately.
 
 ### 9. SQL Analysis: Complex Queries and Business Problem Solving
-   - **Business Problem-Solving**: Write and execute complex SQL queries to answer critical business questions, such as:
-     - Revenue trends across branches and categories.
-     - Identifying best-selling product categories.
-     - Sales performance by time, city, and payment method.
-     - Analyzing peak sales periods and customer buying patterns.
-     - Profit margin analysis by branch and category.
-   - **Documentation**: Keep clear notes of each query's objective, approach, and results.
+   - **Business Problem-Solving**: Develop and execute complex SQL queries to address key business challenges, such as:
+     - Identifying countries with negative GDP growth.
+     - Listing countries with a population higher than the world average and their corresponding GDP stats.
+     - Highlighting countries contributing over 3% to the world GDP.
+     - Finding countries with GDP above $3 trillion.
+     - Ranking countries based on population growth impact and GDP share.
+   - **Documentation**: Maintain detailed notes for each query, outlining its goal, methodology, and the results obtained, ensuring clarity for future reference and collaboration.
 
 ### 10. Project Publishing and Documentation
    - **Documentation**: Maintain well-structured documentation of the entire process in Markdown or a Jupyter Notebook.
@@ -105,10 +105,15 @@ This project offers a complete data analysis solution focused on extracting valu
 
 ## Results and Insights
 
-This section will include your analysis findings:
-- **Sales Insights**: Key categories, branches with highest sales, and preferred payment methods.
-- **Profitability**: Insights into the most profitable product categories and locations.
-- **Customer Behavior**: Trends in ratings, payment preferences, and peak shopping hours.
+This section summarizes the key findings from the SQL analysis:
+
+- **Insights**: 
+  - Identified countries with negative GDP growth, helping understand economic challenges.
+  - Analyzed countries contributing more than 3% to the world GDP, highlighting major economic players.
+  - Ranked countries by GDP per capita, shedding light on the top-performing economies.
+  - Revealed countries with GDP above $3 trillion, offering insights into the wealthiest economies.
+  - Investigated the relationship between population size and GDP growth, identifying nations where population growth correlates with economic performance.
+
 
 ## Future Enhancements
 
@@ -127,7 +132,7 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-- **Data Source**: Kaggle’s Walmart Sales Dataset
-- **Inspiration**: Walmart’s business case studies on sales and supply chain optimization, Najirh (Zero Analyst)
+- **Data Source**: Kaggle’s GDP global 2022 Dataset
+- **Inspiration**: Global GDP data case studies on Kaggle
 
 ---
