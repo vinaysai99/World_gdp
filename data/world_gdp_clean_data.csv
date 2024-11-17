@@ -1,4 +1,4 @@
-country,"gdp(nominal,2022)",gdp(abrrev.),gdp_growth_percentage,population,gdp_per_capita,worldgdp_share_percentage
+country,gdp_nominal_2022,gdp_abbrevated,gdp_growth_percentage,population,gdp_per_capita,worldgdp_share_percentage
 United States,25462700000000.0,$25.463 trillion,2.06,341534046.0,"$74,554",25.32
 China,17963200000000.0,$17.963 trillion,2.99,1425179569.0,"$12,604",17.86
 Japan,4231140000000.0,$4.231 trillion,1.03,124997578.0,"$33,850",4.21
